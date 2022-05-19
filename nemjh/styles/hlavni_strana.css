@@ -1,0 +1,148 @@
+/* Změna obrázku v headeru */
+
+.cycle-bg-image {
+	background-position: center bottom;
+}
+
+/* Vyhledávání*/
+
+nav.vyhledavani {
+	top: 380px;
+}
+
+/* Odsazení sekcí */
+.banner_lekarna,
+.banner_povinna_publicita,
+.banner_statistiky {
+	padding-top: 50px;
+}
+/* Nabídka práce */
+
+.banner_nabidka_prace {
+    background-image: url(../images/banner_nabidka_prace_pozadi_001.webp);
+	color: #ffffff;
+    min-height: 492px;
+}
+
+.banner_nabidka_prace_obal > div:first-child {
+	width: 55%;
+	float: left;
+}
+
+.banner_nabidka_prace_obal > div:nth-child(2) {
+	float: left;
+	width: 45%;
+}
+
+.banner_nabidka_prace h2 {
+	color: #ffffff;
+	font-size: 2.500rem;
+	line-height: 3rem;
+	letter-spacing: 0.5rem;
+}
+
+.banner_nabidka_prace_obal_levy h2 {
+	padding: 120px 0px 0px 50px;
+}
+
+.banner_nabidka_prace_obal_pravy h2 {
+	padding: 30px 0px 0px 20px;
+}
+
+.banner_nabidka_prace_obal a {
+	background: none;
+	border: 2px solid #63b1da;
+	color: #ffffff;
+	font-size: 1.563rem;
+    text-transform: uppercase;
+    padding: 10px 30px 10px 30px;
+}
+
+.banner_nabidka_prace_obal a:hover {
+	border-color: #74ccfb;
+	text-decoration: none;
+}
+
+.ikona_volna_mista {
+	display: block;
+    padding-left: 160px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.nabidka_prace_odkaz {
+	margin-left: 85px;
+    display: inline-block;
+}
+
+/* Lékárna */
+
+.obal33 {
+	float: left;
+	text-align: center;
+	padding: 0px 20px 20px 20px;
+	width: 33.3%;
+}
+
+.banner_lekarna h2,
+.banner_povinna_publicita h2 {
+    color: #4d97e3;
+    letter-spacing: 0.50rem;
+    text-align: center;
+    padding: 20px 0px 25px 0px;
+}
+
+.banner_lekarna h3 {
+	color: #b19200;
+	font-weight: normal;
+    padding: 10px 0px 20px 0px;
+}
+
+/* Povinná publicita */
+.banner_povinna_publicita_obal {
+	border: 1px solid #d5d6d8;
+    border-left: 0px;
+    border-right: 0px;
+	text-align: center;
+	padding: 30px 0px;
+}
+
+.banner_povinna_publicita h2 {
+    padding: 0px 0px 25px 0px;
+}
+
+.banner_povinna_publicita_obal img {
+	margin: 0px 10px;
+}
+
+/* Statistiky */
+
+.banner_statistiky_obal {
+	color: #4d97e3;
+	background-image: url(../images/statistiky_pozadi_001.webp);
+	min-height: 245px;
+}
+
+.obal25 {
+	float: left;
+    text-align: center;
+	padding-top: 75px;
+	width: 25%;
+}
+
+.obal25 p {
+	font-size: 3.125rem;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.banner_statistiky_obal h3 {
+	font-size: 0.938rem;
+	font-weight: normal;
+}
+
+@media screen and (max-width: 600px) {
+	nav.vyhledavani {
+		top: 300px !important;
+	}
+}

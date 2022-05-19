@@ -1,0 +1,107 @@
+#PRESMEROVANI NA HTTPS
+RewriteEngine On
+# all redirection HTTP -> HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+# BEGIN WordPress
+# Direktivy (řádky) mezi 'BEGIN WordPress' a 'END WordPress' jsou
+# dynamicky generované a měly by být upravovány pouze pomocí filtrů WordPressu.
+# Veškeré změny směrnic mezi těmito značkami budou přepsány.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+Redirect 301 /mapa https://www.nemjh.cz/wp-content/themes/nemjh/map
+Redirect 301 /prihlaseni https://www.nemjh.cz/wp-admin     
+Redirect 301 /lekarna https://www.nemjh.cz/lek
+Redirect 301 /oteviracidoby https://www.nemjh.cz/ordinacni-hodiny
+Redirect 301 /provoznidoby https://www.nemjh.cz/ordinacni-hodiny
+Redirect 301 /vypis/aktualni-informace https://www.nemjh.cz
+Redirect 301 /ockovaci-certifikat https://www.nemjh.cz/certifikaty/#title
+
+Redirect 301 /informovany-souhlas https://www.nemjh.cz/wp-content/uploads/files/covid-19/nemjh_informovany_souhlas_ockovani_covid-19.pdf
+Redirect 301 /epidemiologicky-dotaznik https://www.nemjh.cz/wp-content/uploads/files/covid-19/mzcr-dotaznik-ockovaneho-12-15let.pdf 
+
+
+# BEGIN Compress text files
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE \
+text/html \
+text/xml \
+text/css \
+text/plain \
+image/svg+xml \
+application/xhtml+xml \
+application/xml \
+application/rdf+xml \
+application/rss+xml \
+application/atom+xml \
+text/javascript \
+text/ecmascript \
+application/javascript \
+application/x-javascript \
+application/ecmascript \
+application/json \
+application/x-font-ttf \
+application/x-font-otf \
+font/truetype \
+font/opentype \
+application/x-pointplus
+</ifModule>
+# END Compress text files 
+
+
+# BEGIN Cache-Control Headers
+<ifModule mod_headers.c>
+<filesMatch "\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "public"
+</filesMatch>
+<filesMatch "\.(css)$">
+Header set Cache-Control "public"
+</filesMatch>
+<filesMatch "\.(js)$">
+Header set Cache-Control "private"
+</filesMatch>
+<filesMatch "\.(x?html?|php)$">
+Header set Cache-Control "private, max-age=29030400, no-cache"
+</filesMatch>
+</ifModule>
+# END Cache-Control Headers
+
+
+# BEGIN Turn ETags Off
+Header unset Pragma
+FileETag None
+Header unset ETag
+# END Turn ETags Off            
+
+
+# BEGIN Expire headers
+# Pingdom Tools a GTMetrix v YSL hlasi Add Expires Headers. Je to kvuli externim scriptum typu Google Tag Manager 
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 2592000 seconds"
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/jpg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 604800 seconds"
+ExpiresByType application/javascript "access plus 604800 seconds"
+ExpiresByType application/x-javascript "access plus 604800 seconds"
+ExpiresByType text/html "access plus 604800 seconds"
+ExpiresByType application/xhtml+xml "access plus 604800 seconds"
+</ifModule>
+# END Expire headers   

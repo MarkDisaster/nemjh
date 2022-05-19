@@ -1,0 +1,12 @@
+article {
+	margin-bottom: 10px;
+}
+
+article header {
+	padding: 0px;
+	width: 100%;
+}
+
+.aktuality h3 a {
+	display: inline;
+}

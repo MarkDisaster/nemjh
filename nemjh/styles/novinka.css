@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clanek_prefix {
+	float: left;
+    padding: 10px 40px 0px 0px;
+    width: 100%;
+}
+
+.aktuality_obal article header {
+	padding: 0;
+	width: 100%;
+}
+
+aside article .clanek_nahled_datum {
+	width: 20%;
+}
+
+aside article header {
+	width: 80%;
+}
+
+.aktuality h2 {
+    color: #beaf03;
+	line-height: 1.2em;
+    letter-spacing: 0.20em;
+	text-align: center;
+    /*text-align: left;
+    padding: 20px 40px 5px 0px;*/
+}

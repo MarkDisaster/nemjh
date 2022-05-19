@@ -1,0 +1,33 @@
+article header {
+	padding-left: 0px;
+	padding-right: 60px;
+	width: 100%;
+}
+
+.header100 {
+	width: 100%;
+}
+/*
+.aktuality_obal h2 {
+	text-align: left;
+}*/
+
+.provozni_doby table td:first-child,
+.provozni_doby table th:first-child {
+	width: 20%;
+}
+
+/* tohle do vlastního souboru pro oddělení*/
+header .post-edit-link {
+	display: block;
+	text-align: center;
+}
+
+/* Nastavení určitých stránek */
+/* Odsazení u stránky Vedení spolelčnosti */
+.page-id-902 article,
+.page-id-1120 article,
+.page-id-1120 .nadpis100 {
+	margin-bottom: 0px;
+	padding: 0;
+}

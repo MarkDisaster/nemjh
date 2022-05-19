@@ -1,0 +1,1535 @@
+@charset "utf-8";
+
+/* ****************************************
+	Theme Name: NEMJH
+	Theme URI: http://nemjh.cz
+	Author: Marek Marek
+	Author URI: http://nemjh.cz
+	Description: Šablona vytvořená pro Nemocnici Jindřichův Hradec.
+	Text Domain: nemjh
+	Tags:
+
+	
+	Soubor: styles.css
+
+	Seznam stylů
+	1. Obecné styly
+		1.1. Hlavní
+
+	2. Hlavička
+		2.1. Logo
+		2.2. Menu
+
+	3. Obsah
+
+**************************************** */
+
+/***** 1. Obecné styly *****/
+
+/* 1.1 Hlavní */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  color: #303030;
+  font-family: "Open Sans", sans-serif;
+  /*font-size: 1rem;*/
+  /*line-height: 1.7rem; H1 v headeru se pak necentruje*/
+  margin: 0;
+}
+
+main {
+  font-size: 0.938rem;
+  line-height: 1.5;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+ul,
+ol {
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  color: #4d97e3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color none 0px;
+}
+
+/*
+.banner_lekarna,
+.banner_povinna_publicita,
+.banner_statistiky {
+	border: 1px solid #000000;
+    width: 100%;
+}
+*/
+.kontakty,
+.provozni_doby,
+.logo_menu_obal,
+.box_hlavni_informace_obal,
+.paticka_obal,
+.aktuality,
+.banner_nabidka_prace_obal,
+.banner_lekarna_obal,
+.banner_povinna_publicita_obal,
+.banner_statistiky_obal,
+.copyright div,
+.kestazeni,
+.sponzoring {
+  height: auto;
+  margin: 0 auto;
+  max-width: 1100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.kontakty,
+.provozni_doby,
+.kestazeni,
+.sponzoring {
+  position: relative;
+  z-index: 9;
+  background-color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.938rem;
+  width: 100%;
+}
+
+th,
+td {
+  line-height: 1.563rem !important;
+  padding: 8px 10px 8px 0px /*!important*/;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+td {
+  border-top: 1px solid #d5d6d8;
+  vertical-align: top;
+}
+
+table div {
+  display: inline-block;
+}
+
+table img {
+  vertical-align: middle;
+}
+
+/*
+table p {
+	line-height: 2.500rem;
+}
+*/
+/* 1.2. Typografie */
+
+h1 {
+  background: rgba(34, 150, 243, 0.45);
+  color: #fff;
+  display: table;
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  /*letter-spacing: 0.50rem;*/
+  letter-spacing: 1rem;
+  line-height: 4rem;
+  margin: 0 auto;
+  max-width: 1065px;
+  padding: 5px 10px 5px 25px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 30%;
+}
+
+#searchbox {
+  background-color: #ffffff;
+  border: 2px solid #4d97e3;
+  color: #4d97e3;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+  margin: 0 auto;
+  line-height: 2.5rem;
+  letter-spacing: 0.5rem;
+  min-width: 500px;
+  padding: 10px 30px;
+  text-align: center;
+  text-align-last: center;
+  text-transform: uppercase;
+}
+
+.box_hlavni_informace_obal select,
+h2 {
+  color: #4d97e3;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* TOHLE MOŽNÁ PŘESUNOUT DO NOVÉHO CSS SOUBORU, KTERÝ SE BUDE NAČÍTAT NA STRÁNCE S VÝPISY AMBULANCÍ */
+.bocni_panel_obal .ngg_images h2,
+.box_hlavni_informace_obal select option,
+h3 {
+  color: #4d97e3;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/*h3::before {
+    content: "";
+    display: block;
+    height: 80px; /* fixed header height*/
+/* margin: -80px 0 0; /* negative fixed header height */
+/*position: relative;
+	z-index: 1;
+}*/
+
+.clanek_precist {
+  position: relative;
+  z-index: 10;
+}
+
+/* 1.3. Pole (formáláře) */
+
+.vyhledavani_pole {
+  border: 2px solid #4d97e3;
+  border-right: none;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  height: 40px;
+  margin: 0;
+  padding-left: 10px;
+  width: 290px;
+}
+
+/***** 2. Hlavička *****/
+
+.logo_menu_obal3 {
+  padding-top: 100px;
+}
+
+/* Hlavní menu */
+.logo_menu_obal2 {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+/* 2.1. Logo */
+
+.logo_menu_obal {
+  height: 100px;
+  transition: 0.3s;
+}
+
+.hlavicka_logo,
+.hlavni_menu {
+  display: inline-block;
+}
+
+.hlavicka_logo {
+  float: left;
+  margin: 25px 0px 25px 0px;
+  width: 220px;
+}
+
+#logo_img {
+  transition: 0.3s;
+  max-height: 3.75rem;
+}
+
+/* 2.2. Menu */
+
+.hlavni_menu {
+  max-height: 70px;
+  /*max-width: calc(100% - 185px);*/
+  margin: 30px 0px 0px 50px;
+  transition: 0.3s;
+}
+
+.pozadi {
+  background-image: url(images/hlavicka_pozadi_002.jpg);
+  background-position: bottom;
+  background-size: cover;
+  border-bottom: 5px solid #4d97e3;
+  height: 500px;
+  /*
+	margin-top: 100px;*/
+  text-align: center;
+}
+
+/* 2.3. Vyhledávání */
+
+nav.vyhledavani {
+  left: 0;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: absolute;
+  /*top: 60%;*/
+  right: 0;
+  top: 480px;
+  width: 100%;
+}
+
+.vyhledavani_formular {
+  float: right;
+  margin: 0px 40px 0px 0px;
+  position: relative;
+  z-index: 11;
+}
+
+.vyhledavani_tlacitko {
+  background-color: #ffd600;
+  border: 2px solid #998d00;
+  box-sizing: border-box;
+  color: #3f3a00;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  margin: 0px 0px 0px -5px;
+  text-transform: uppercase;
+  width: 110px;
+}
+
+.drobeckova_navigace {
+  color: #999999;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.drobeckova_navigace a {
+  color: #999999;
+}
+
+/***** 3. Obsah *****/
+
+/* 3.1. Hlavní informace */
+
+.box_hlavni_informace {
+  background-color: #f7f8f9;
+}
+
+.box_hlavni_informace_obal {
+  /*min-height: 200px;*/
+  padding-bottom: 10px;
+}
+
+.box_hlavni_informace_obal2 {
+  padding: 20px 0px 30px 0px;
+}
+
+.box_hlavni_informace .box_hlavni_informace_obal2:first-child
+
+/*,
+.box_pohotovost*/ {
+  height: auto;
+  float: left;
+  width: 61%;
+}
+
+.box_hlavni_informace .box_hlavni_informace_obal2:first-child > div {
+  padding: 0px 20px 0px 20px;
+}
+
+.box_hlavni_informace .box_hlavni_informace_obal2:nth-child(2)
+
+/*,
+.box_mapa*/ {
+  height: auto;
+  float: left;
+  width: 33.3%;
+}
+
+.box_hlavni_informace .box_hlavni_informace_obal2 > div {
+  float: right;
+  padding: 15px 0px 0px 15px;
+  width: calc(100% - 70px);
+}
+
+/*
+.box_hlavni_informace h2 {
+	color: #4d97e3;
+	margin: 25px 0px 0px 0px;
+}*/
+
+.box_hlavni_informace_obal2 img {
+  margin: 15px 0px 0px 0px;
+}
+
+/* 3.2. Aktuality*/
+
+.aktuality_obal {
+  height: auto;
+  float: left;
+  width: 64.5%;
+}
+
+.aktuality h2,
+.nadpis100,
+.aside_vyrazne h2,
+#nav_menu-6 h2 {
+  color: #4d97e3;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  padding: 20px 0px 5px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nadpis pro stránku Kontakt */
+.page-template-page-covid h2,
+.page-id-6086 .aktuality_obal h2 {
+  color: #beaf03 /*!important*/;
+  line-height: 1.2em !important;
+  letter-spacing: 0.2em !important;
+  text-align: left !important;
+  padding: 20px 0px 5px 0px !important;
+}
+
+.aktuality h3 a {
+  color: #b19200;
+  font-weight: normal;
+  margin-right: 60px;
+}
+
+article header time,
+article .kategorie_tag {
+  float: left;
+}
+
+article {
+  display: inline-block;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+article header {
+  float: right;
+  line-height: 30px;
+  /*min-height: 30px;*/
+  padding-left: 20px;
+  width: 87.32%;
+}
+
+time {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.kategorie_tag {
+  border-radius: 10px;
+  color: #221f1f;
+  font-size: 0.813rem;
+  line-height: 20px;
+  max-height: 20px;
+  text-decoration: none;
+}
+
+article .kategorie_tag {
+  background-color: #eceff5;
+  margin: 5px 7px 0px 0px;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.clanek_nahled_datum {
+  float: left;
+  text-align: center;
+  width: 12.68%;
+}
+
+.clanek_nahled {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.clanek_nahled img {
+  width: 100%;
+  height: auto;
+}
+
+.clanek_prefix {
+  float: left;
+  padding: 10px 60px 0px 0px;
+  width: 100%;
+}
+
+article ul,
+article ol {
+  margin: 0;
+}
+
+.dalsi_prispevky {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+  width: 8.1em;
+}
+
+.dalsi_prispevky:hover {
+  color: #b19200;
+}
+
+.tl_dalsi_prispevky {
+  border: 2px solid #b19200;
+  color: #b19200;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 5rem;
+  line-height: 40px;
+  margin-bottom: 10px;
+  min-width: 90px;
+  overflow: hidden;
+}
+
+.link_dalsi_prispevky {
+  cursor: pointer;
+}
+
+.provozni_doby table:nth-child(2) th,
+.provozni_doby table:nth-child(2) th,
+.kestazeni th,
+.sponzoring-table th {
+  color: #4d97e3;
+  font-weight: 600;
+}
+
+.provozni_doby table:nth-child(2) th:nth-child(2),
+.provozni_doby table:nth-child(2) td:nth-child(2) {
+  width: 30%;
+}
+
+.provozni_doby table td:first-child,
+.provozni_doby table th:first-child {
+  width: 30%;
+}
+
+#stop {
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+
+/* UPOZORNĚNÍ */
+.upozorneni {
+  background-color: #ff6060;
+  border: 1px solid #ff2929;
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.font-red.current-menu-item,
+.white {
+  color: #ffffff;
+}
+
+.upozorneni h3 {
+  font-weight: normal;
+}
+
+/* Oddělení */
+
+body:not(.home) .box_hlavni_informace {
+  text-align: center;
+}
+
+.box_hlavni_informace_obal3 {
+  display: inline-block;
+}
+
+body:not(.home) .box_hlavni_informace_obal {
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  width: auto;
+}
+
+.uzivatel_obal {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  padding: 0px 50px 0px 50px;
+}
+
+.uzivatel_obal_maly {
+  padding-left: 50px;
+}
+
+.uzivatel_avatar {
+  float: left;
+}
+
+.uzivatel_avatar img {
+  height: 100px;
+  border-radius: 100%;
+  width: auto;
+}
+
+.uzivatel_info {
+  float: right;
+  line-height: 1.875em;
+  padding: 0px 0px 0px 35px;
+}
+
+.uzivatel_jmeno {
+  /*color: #4d97e3;*/
+  font-size: 1.125em;
+}
+
+.uzivatel_jmeno_male {
+  width: 235px;
+}
+
+.uzivatel_tag {
+  background-color: #4d97e3;
+  border-radius: 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.813rem;
+  line-height: 20px;
+  margin: 0;
+  max-height: 20px;
+  padding: 0px 10px 0px 10px;
+}
+
+.uzivatel_zivotopis {
+  font-weight: 600;
+}
+
+.uzivatel_info img {
+  padding-bottom: 4px;
+  vertical-align: middle;
+}
+
+/* Galerie */
+.bocni_panel_obal .envira-gallery,
+.bocni_panel_obal .ngg_images {
+  max-width: 290px;
+}
+
+/*tohle asi do společného hlavního souboru styles.css*/
+.envira-gallery-wrap h3,
+.bocni_panel_obal .ngg_images h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.ngg-galleryoverview.default-view {
+  margin: 0px !important;
+  text-align: left !important;
+}
+
+.ngg-widget img {
+  height: 50px !important;
+  width: auto !important;
+}
+
+/* 3.3. Boční panel */
+
+aside {
+  height: auto;
+  float: left;
+  width: 35.5%;
+}
+
+.menu-casto-hledate-container ul {
+  line-height: 1.875rem;
+}
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.aktuality_bocni_panel_obal {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.bocni_panel_obal {
+  display: inline-block;
+  width: 100%;
+}
+
+.bocni_panel_obal {
+  max-width: 386px;
+}
+
+/* toto zapsat jako jednu třídu*/
+.menu-dulezite-odkazy-container ul,
+.menu-aro-container ul {
+  line-height: 2.5rem;
+  padding: 0;
+}
+
+/* toto zapsat jako jednu třídu*/
+.menu-dulezite-odkazy-container a,
+.menu-aro-container a {
+  color: #b19200;
+}
+
+/*
+.menu-dulezite-odkazy-container a:before {
+	background-size: 1.875rem 1.875rem;
+	content: '';
+	display: inline-block;
+	height: 1.875rem;
+	margin-right: 0.82rem;
+	vertical-align: middle;
+	width: 1.875rem;
+}*/
+
+ol.seznam li,
+ul.seznam li,
+ul#menu-dulezite-odkazy li,
+.bocni_panel_obal section.widget:first-child ul li {
+  background-size: 1.875rem 1.875rem;
+  background-repeat: no-repeat;
+  content: "";
+  /*display: inline-block;*/
+  line-height: 1.563rem;
+  margin-right: 0.82rem;
+  padding-left: 40px;
+  vertical-align: middle;
+  padding-top: 2px;
+  padding-bottom: 13px;
+}
+
+/* Ikony v menu */
+ul.seznam li,
+ul#menu-dulezite-odkazy li,
+.bocni_panel_obal section.widget:first-child ul li {
+  background-image: url(images/ikona_zakladni.png);
+}
+
+ul.seznam.zelena.otaznik li {
+  background-image: url(images/ikona_otaznik.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona001 {
+  background-image: url(images/ikona_objednavani_stravy.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona_dotaznikspokojenosti {
+  background-image: url(images/ikona_dotaznik_spokojenosti.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona003 {
+  background-image: url(images/ikona_akcni_letak.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona004 {
+  background-image: url(images/ikona_jihoceske_zdravi.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona007 {
+  background-image: url(images/ikona_casova_osa.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona_kestazeni {
+  background-image: url(images/ikona_kestazeni.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona_ordinacnihodiny {
+  background-image: url(images/ikona_ambulance.png);
+}
+
+.bocni_panel_obal section.widget:first-child ul li.ikona_kontakty {
+  background-image: url(images/ikona_kontakty.png);
+}
+
+/* Ikony na stránce erecept */
+.cislo1 {
+  background-image: url(images/ikona_1.png);
+}
+
+li.cislo2 {
+  background-image: url(images/ikona_2.png);
+}
+
+li.cislo3 {
+  background-image: url(images/ikona_3.png);
+}
+
+li.cislo4 {
+  background-image: url(images/ikona_4.png);
+}
+
+li.cislo5 {
+  background-image: url(images/ikona_5.png);
+}
+
+#nav_menu-6,
+.aside_vyrazne {
+  border: 2px solid #eceff5;
+}
+
+.menu-casto-hledate-container ul li,
+.aside_vyrazne ul li {
+  color: #4d97e3;
+  list-style: disc;
+}
+
+/* Patička */
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+}
+
+.paticka_logo {
+  margin: 0 auto;
+  padding: 40px 0px 30px 0px;
+  width: 220px;
+}
+
+.copyright {
+  background-color: #1f1f1f;
+  color: #525151;
+  text-align: left;
+}
+
+.copyright p {
+  line-height: 35px;
+}
+
+.paticka_socialni_site img {
+  margin: 20px 10px 20px 10px;
+}
+
+.nohover:hover {
+  text-decoration: none;
+}
+
+.pro-zamestnance div {
+  display: inline-block;
+}
+
+.pro-zamestnance div:first-child {
+  color: #929292;
+}
+
+#menu_zamestnanci {
+  padding: 0px;
+}
+
+#menu_zamestnanci li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+/* Ordinační hodiny */
+
+.category-provozni-doby table:first-child th,
+.category-provozni-doby table:first-child td,
+.provozni_doby table:first-child th,
+.provozni_doby table:first-child td {
+  border-top: 0px none;
+  padding: 0px 10px 0px 0px !important;
+  vertical-align: top;
+}
+
+.category-ordinacni-hodiny .ambulance {
+  width: 100%;
+}
+
+.box_hlavni_informace_obal2 > div > p {
+  position: relative;
+  z-index: 2;
+}
+
+.ordinacni-hodiny table th:first-child,
+.ordinacni-hodiny table td:first-child {
+  width: 175px;
+}
+
+/* Kontakty */
+.kontakty table img {
+  border-radius: 100%;
+  display: block;
+  height: 3.5em;
+  width: auto;
+}
+
+.kontakty th,
+table.dataTable thead th,
+table.dataTable thead td {
+  color: #4d97e3 !important;
+  font-weight: 600 !important;
+  border: 0px none !important;
+}
+
+.kontakty td,
+.kontakty div {
+  vertical-align: middle;
+}
+
+/* Dokumenty ke stažení */
+.tabulka_dokumenty th:nth-child(2),
+.tabulka_dokumenty td:nth-child(2) {
+  width: 40%;
+}
+
+/* Fonty */
+.hlavni_menu .font-red a,
+.font-red,
+.font-red a {
+  color: #ff0000 !important;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+/* Tlačítka */
+
+.tlacitko,
+.button {
+  background-color: #ffffff;
+  border: 2px solid;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.15s;
+  padding: 10px 30px 10px 30px;
+  vertical-align: top;
+}
+
+.tlacitko:hover,
+.button:hover {
+  background-color: #f7faff;
+  text-decoration: none;
+}
+
+.tlacitko_zluta,
+.gform_button,
+.tlacitko_obrys_zluta:hover,
+.gform_previous_button:hover,
+.gform_next_button:hover {
+  background: #ffd600;
+  border: 2px solid #998d00;
+  color: #3f3a00;
+}
+
+#CybotCookiebotDialogBodyButtonDecline:hover,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll,
+#CybotCookiebotDialogBodyLevelButtonCustomize:hover,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:hover,
+.tlacitko_modra,
+.tlacitko_obrys_modra:hover {
+  background-color: #4d97e3 !important;
+  border: 2px solid #2e69a7 !important;
+  color: #ffffff !important;
+}
+
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover,
+.tlacitko_modra:hover {
+  background-color: #4a8fd7 !important;
+}
+
+.tlacitko_zluta:hover,
+.gform_button:hover {
+  background-color: #efc902;
+}
+
+#CybotCookiebotDialogBodyButtonDecline,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection,
+#CybotCookiebotDialogBodyLevelButtonCustomize,
+.tlacitko_obrys_modra {
+  border: 2px solid #4d97e3 !important;
+}
+
+.tlacitko_obrys_zluta,
+.gform_previous_button,
+.gform_next_button {
+  border: 2px solid #ffd600;
+  color: #998d00;
+}
+
+/* Odsazení */
+.kestazeni,
+.kontakty {
+  padding-bottom: 50px;
+}
+
+.pt_25 {
+  padding-top: 25px;
+}
+
+.pb_25 {
+  padding-bottom: 25px;
+}
+
+.mb_15 {
+  margin-bottom: 15px;
+}
+
+.mt_15 {
+  margin-top: 15px;
+}
+
+.ml_25 {
+  margin-left: 25px;
+}
+
+.mr_25 {
+  margin-right: 25px;
+}
+
+/* Wordpress Pluginy */
+/* Gravity Forms */
+.gform_wrapper li.gfield_error div.ginput_complex.ginput_container label,
+.gform_wrapper li.gfield_error ul.gfield_checkbox,
+.gform_wrapper li.gfield_error ul.gfield_radio,
+.gform_wrapper .gfield_error .gfield_label {
+  color: #303030 !important;
+}
+
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper
+  li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: #ffffff !important;
+  border: 0px none !important;
+}
+
+.gform_wrapper
+  li.gfield_error
+  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.gform_wrapper li.gfield_error textarea {
+  border: 1px solid #000000 !important;
+}
+
+.gform_wrapper div.validation_error {
+  color: #ff0000 !important;
+  font-weight: 600 !important;
+  border: 0px none !important;
+}
+
+.validation_message {
+  color: #ff0000 !important;
+  font-size: 0.813em;
+  font-weight: 600 !important;
+  margin-top: -5px !important;
+  padding-top: 0px !important;
+}
+
+.gform_wrapper
+  li.gfield.gfield_error.gfield_contains_required
+  div.ginput_container,
+.gform_wrapper
+  li.gfield.gfield_error.gfield_contains_required
+  label.gfield_label {
+  margin-top: 0px;
+}
+
+/*CookieBot*/
+
+#CybotCookiebotDialogBodyButtonsWrapper {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton:hover {
+  opacity: 1 !important;
+}
+
+#CybotCookiebotDialog .CybotCookiebotFader.CybotCookiebotDialogActive {
+  opacity: 0 !important;
+}
+
+.CybotCookiebotDialogBodyBottomWrapper {
+  margin-top: 0 !important;
+}
+
+#CybotCookiebotDialogBodyButtonDecline {
+  margin-bottom: 0.5em !important;
+}
+
+#CybotCookiebotDialogTabContent
+  input:checked
+  + .CybotCookiebotDialogBodyLevelButtonSlider {
+  background-color: #4a8fd7 !important;
+}
+
+#CybotCookiebotDialogNav
+  .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive {
+  border-color: #4a8fd7 !important;
+}
+
+#CybotCookiebotDialogBodyEdgeMoreDetailsLink,
+#CybotCookiebotDialogNav
+  .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive,
+#CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink:hover {
+  color: #4a8fd7 !important;
+}
+
+.CybotCookiebotDialogBodyButton {
+  border-radius: 0 !important;
+}
+
+#CybotCookiebotDialogFooter
+  #CybotCookiebotDialogBodyButtons
+  .CybotCookiebotDialogBodyButton:not(:last-of-type),
+#CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton,
+#CybotCookiebotDialogFooter
+  .CybotCookiebotDialogBodyButton:not(:first-of-type) {
+  margin-bottom: 0.5em !important;
+}
+
+/* Odstranění nežádoucích položek */
+.CookiebotWidget-main-logo,
+#CybotCookiebotDialogBodyLevelButtonCustomize,
+#CybotCookiebotDialogPoweredByText,
+#CybotCookiebotDialogHeader,
+body.ordinacni-hodiny aside,
+.category-covid-19 .box_post_filtr_obal:after,
+.gf_progressbar_wrapper,
+.home a.novinky,
+.archive .prace,
+.archive .novinky,
+.archive .sestry,
+.archive .ostzdrper,
+.archive .ostnezdper,
+.archive .lekari,
+.article .sestry,
+.article .ostzdrper,
+.article .ostnezdper,
+.article .lekari,
+body.archive div.category-prace,
+.prace time,
+.category-certifikaty .box_hlavni_informace,
+.category-novinky .box_hlavni_informace,
+.dataTables_filter,
+body:not(.page-id-6086):not(.page-id-902) .kontakt-clen_predstavenstva,
+body:not(.page-id-6086) .kontakt-kni,
+body:not(.page-id-902) .kontakt-manazer_kvality,
+.kontakt-zsp,
+.tag-manazer_kvality,
+.page-template-oddeleni:not(.page-id-6086) .kontakt-predseda_predstavenstva,
+.kontakt-uro,
+.kontakt-aro,
+.kontakt-chir,
+.kontakt-deo,
+.kontakt-gpo,
+.kontakt-int,
+.kontakt-nip,
+.kontakt-neu,
+.kontakt-diop,
+.kontakt-onrp,
+.kontakt-ospp,
+.kontakt-ort,
+.kontakt-soc,
+.kontakt-orl,
+.kontakt-up,
+.kontakt-cs,
+.kontakt-cos,
+.kontakt-hds,
+.kontakt-dzs,
+.kontakt-ohts,
+.kontakt-okb,
+.kontakt-olm,
+.kontakt-ocn,
+.kontakt-onk,
+.kontakt-pao,
+.kontakt-rdg,
+.kontakt-mr,
+.kontakt-reh,
+.kontakt-lek,
+.kontakt-spi,
+.kontakt-edu,
+.kontakt-zsc,
+.kontakt-uprava_stranek,
+.kontakt-dobrovolnictvi,
+.kontakt-zivotopis,
+.page-id-150146 .kontakt-stanicni_sestra_a
+/* stránka diop */
+,
+.page-id-150146 .kontakt-stanicni_sestra_b,
+.page-id-150146 .kontakt-diop
+/* stránka diop */
+,
+.page-id-150146 .kontakt-onrp
+/* stránka diop */
+,
+.page-id-4054 .kontakt-diop
+/* stránka onrp */
+,
+.page-id-4054 .kontakt-onrp
+/* stránka onrp */
+,
+.page-id-4054 .kontakt-stanicni_sestra
+/* stránka onrp */
+,
+.page-id-6086 .kontakt-aro
+/* stránka Kontakt */
+,
+.page-id-6086 .kontakt-primar,
+.page-id-6086 .kontakt-referent,
+.page-id-6086 .kontakt-dotaznik_spokojenosti,
+.page-id-6086 .kontakt-njh_zakladni_uzivatel,
+.page-id-902 .kontakt-deo
+
+/* stránka Vedení společnosti */
+,
+.page-id-902 .kontakt-aro,
+.page-id-902 .kontakt-primar,
+.page-id-152883 .kontakt-stanicni_sestra_b,
+.page-id-418 .kontakt-stanicni_sestra,
+.kontakty table div:not([class]),
+table div[class=""],
+div[class*="zadnyemail"],
+a[class*="zadnyemail"],
+div[class*="zadnaprezdivka"],
+p[class*="zadnaprezdivka"],
+.kontakty .kontakt-,
+.kontakt-z_vedeni_nemocnice,
+.kontakt-z_kontakt_vedeni_nemocnice,
+.envirabox-caption,
+.envirabox-title,
+.gform_wrapper .gfield_required {
+  display: none !important;
+}
+
+/*Stránka Partneři*/
+.page-id-156124 .aktuality_obal {
+  width: 100%;
+}
+
+.page-id-156124 .aktuality_obal img {
+  margin: 0 10px;
+}
+
+.page-id-156124 .clanek_prefix {
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+/* Pluginy */
+.ngg-widget img {
+  border: 0px none !important;
+}
+
+@media screen and (max-width: 1124px) {
+  .box_hlavni_informace,
+  .drobeckova_navigace,
+  .aktuality,
+  .paticka_obal,
+  .copyright,
+  .kontakty,
+  .provozni_doby,
+  .kestazeni {
+    padding: 0px 15px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 85%;
+  }
+
+  #nav_hlavni_menu {
+    display: block;
+    margin: 0;
+  }
+
+  #logo_menu_obal {
+    height: 70px;
+  }
+
+  #hlavicka_logo {
+    margin: 20px 0px 0px 15px;
+  }
+
+  #logo_img {
+    width: 80%;
+  }
+
+  #logo_menu_obal2 {
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo_menu_obal3 {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 85%;
+  }
+
+  /*.box_hlavni_informace_obal select,
+	h2 {
+		font-size: 1.125rem;
+	}*/
+
+  .box_hlavni_informace_obal select {
+    word-wrap: break-word;
+    /* IE*/
+    white-space: -moz-pre-wrap;
+    /* Firefox */
+    white-space: pre-wrap;
+    /* other browsers */
+    display: inline-block;
+    text-align-last: left !important;
+    max-width: 100%;
+    position: relative;
+    z-index: 6;
+    -webkit-appearance: menulist;
+  }
+
+  .box_hlavni_informace_obal select option {
+    font-size: 70%;
+  }
+
+  .box_hlavni_informace_obal:after {
+    font-size: 1rem !important;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+    margin-top: 25px;
+    max-width: 100%;
+    position: relative;
+    top: 0px;
+    word-break: break-word;
+  }
+
+  .uzivatel_jmeno,
+  .gform_wrapper,
+  .erecept003,
+  .box_hlavni_informace .box_hlavni_informace_obal2 > div,
+  .box_hlavni_informace .box_hlavni_informace_obal2:first-child,
+  .box_hlavni_informace .box_hlavni_informace_obal2:nth-child(2),
+  .aktuality_obal,
+  .banner_nabidka_prace_obal > div:first-child,
+  .obal33,
+  aside,
+  .bocni_panel_obal {
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .kestazeni table thead,
+  .kontakty table thead,
+  .erecept002,
+  .box_hlavni_informace_obal:after,
+  .box_hlavni_informace .ambulance img,
+  .banner_nabidka_prace_obal_pravy {
+    display: none;
+  }
+
+  aside {
+    order: 2;
+    width: 100%;
+  }
+
+  .box_hlavni_informace .ambulance td {
+    width: 35%;
+  }
+
+  .box_hlavni_informace .ambulance td:first-child {
+    width: 30%;
+  }
+
+  .uzivatel_obal,
+  .banner_nabidka_prace_obal > div:first-child {
+    text-align: center;
+  }
+
+  .uzivatel_info,
+  .clanek_prefix {
+    padding: 0 !important;
+  }
+
+  .banner_nabidka_prace_obal a {
+    margin: 0px !important;
+  }
+
+  .banner_nabidka_prace_obal_levy h2 {
+    padding: 50px 0px 0px 0px !important;
+  }
+
+  .banner_nabidka_prace {
+    min-height: 350px !important;
+  }
+
+  .ikona_volna_mista {
+    padding-left: 0px !important;
+  }
+
+  .ikona_volna_mista {
+    margin: 0 auto;
+  }
+
+  .obal25 {
+    padding: 15px 0px !important;
+    width: 50% !important;
+  }
+
+  body:not(.home) .box_hlavni_informace_obal {
+    padding: 15px 0px 0px 0px;
+  }
+
+  .banner_statistiky {
+    padding-top: 10px !important;
+  }
+
+  .pozadi {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pozadi div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav.vyhledavani {
+    margin-top: 25px;
+    position: static;
+  }
+
+  .vyhledavani_formular,
+  .uzivatel_obal {
+    padding: 10px 15px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .uzivatel_info,
+  .vyhledavani_pole,
+  .vyhledavani_tlacitko {
+    width: 100%;
+  }
+
+  .vyhledavani_pole {
+    border: 2px solid #4d97e3;
+  }
+
+  .vyhledavani_formular,
+  .vyhledavani_tlacitko {
+    margin: 0;
+  }
+
+  #searchbox {
+    max-width: 80%;
+  }
+
+  .uzivatel_avatar {
+    float: none;
+  }
+
+  /*Tabulka Kontakty*/
+  .kestazeni table tr,
+  .kontakty table tr {
+    border-bottom: 1px solid #d5d6d8;
+    display: block;
+    padding: 15px 0px;
+  }
+
+  .kestazeni table td,
+  .kontakty table td {
+    border: 0px none;
+    display: block;
+    padding: 0px 10px 0px 0px;
+    text-align: center;
+  }
+
+  .kontakty table img {
+    display: inline-block;
+  }
+}
+
+/* Pouze na endoře (citát Wericha) */
+.souhrn {
+  display: none;
+}

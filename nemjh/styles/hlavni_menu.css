@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+.hlavni_menu a {
+	color: #303030;
+}
+
+.menu-hlavni-menu-container > ul:first-child > li > ul {
+	border-top: 3px solid #4d97e3;
+}
+
+
+.sub-menu {
+	height: auto;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 495px;
+	max-width: 1200px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 10;
+	display: none;
+}
+
+.hlavni_menu ul li ul {
+	background: rgba(251, 251, 251, 0.95);
+	box-sizing: border-box;
+	max-height: 495px;
+}
+
+.hlavni_menu ul li ul li ul {
+	background: none;
+}
+
+#covid_menu,
+#hlavni_menu {
+	max-height: 70px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+
+.hlavni_polozky {
+	box-sizing: border-box;
+	float: left;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.hlavni_menu > div > ul > li > a {
+	box-sizing: border-box;
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	height: 70px;
+	line-height: 70px;
+	letter-spacing: 0.04em;
+	padding: 0px 15px 0px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.hlavni_menu .current-menu-item > a,
+.hlavni_menu > div > ul > li:hover {
+	/*border-color: #4d97e3;*/
+	background-color: #4d97e3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hlavni_menu > div > ul > li:hover > a {
+    color: #ffffff;
+}
+
+.hlavni_menu > div > ul > li > ul > li a {
+	color: #221f1f;
+	display: inline-block;
+	/*font-size: 0.938em;*/
+	max-height: 25px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+.hlavni_menu > div > ul > li > ul > li a:hover {
+	text-decoration: none;
+}
+
+.hlavni_menu > div > ul > li > ul > li > a {
+	max-height: 40px;
+	line-height: 40px;
+}
+
+.nadpis_sekce {
+	margin: 30px 0px 0px 30px;
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+}
+
+.nadpis_sekce .sub-menu {
+	position: relative;
+}
+
+ul li ul li a:first-child {
+	font-weight: bold;
+}
+
+ul li ul li ul li a:first-child {
+	font-weight: normal;
+	text-transform: none;
+}
+
+.rozbal_menu ul li ul li {
+	display: block;
+}
+
+.hlavni-menu-ikona-001,
+.hlavni_menu ul > li > ul > li.neviditelny > a {
+	display: none;
+}
+
+/* HOVER EFEKT */
+.hlavni_menu > div > ul > li > ul > li > ul > li > a:after, .hlavni_menu > div > ul > li > ul > li > ul > li > a:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  
+}
+.hlavni_menu > div > ul > li > ul > li > ul > li > a {margin:0;padding:0;border:0 none;position: relative; outline: none;
+}
+
+
+.hlavni_menu > div > ul > li > ul > li > ul > li > a {
+  text-decoration: none;
+  z-index: 1;
+}
+
+.hlavni_menu > div > ul > li > ul > li > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #4d97e3;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .1s linear;
+}
+
+.hlavni_menu > div > ul > li > ul > li > ul > li > a:hover:before,
+.hlavni_menu > div > ul > li > ul > li > ul > li > a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+/* MENU 1 SLOUPEC */
+.menu_male .sub-menu {
+	min-height: auto;
+	left: auto;
+    padding: 0px 20px 10px 0px;
+	right: auto;
+	width: auto;
+}
+
+.menu_male .nadpis_sekce {
+	width: 100%;
+}
+
+@keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      height: 5px;
+     }
+  45% {   
+      transform: scaleX(1.05);
+      height: 5px;
+     }
+  55% {height: 5px;}
+  100% {
+      transform: scaleX(1.05);
+      height: 3.8rem;
+     }
+}
+@keyframes no-hover-v {
+  0% {
+      transform: scaleX(1.05);
+      height: 3.8rem;
+     }
+  45% {height: 5px;}
+  55% {   
+      transform: scaleX(1.05);
+      height: 5px;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 5px;
+      opacity: .02;
+     }
+}
+
+
+/*MOBILNÍ MENU*/
+@media screen and (max-width: 1124px) {
+	#hlavicka_logo {
+        margin: 25px 0px 0px 15px !important;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+    .logo_menu_obal {
+        height: 70px;
+	}
+	
+	.hlavni_menu {
+		margin: 0px 0px 0px 50px;	
+	}
+	
+	.logo_menu_obal3 {
+		padding-top: 70px;
+	}
+	
+	#hlavicka_logo {
+        margin: 20px 0px 0px 15px !important;
+	}
+	
+	#logo_img {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+    #nav_hlavni_menu {
+       width: calc(100% - 185px);
+    }
+	
+	#covid_menu,
+	#hlavni_menu {
+		background: rgba(251, 251, 251, 0.95);
+		display: none;
+		height: calc(100% - 70px);
+		max-height: none;
+		overflow-y: scroll;
+		padding-bottom: 50px;
+		position: fixed;
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	.hlavni-menu-ikona-001 {
+		border: 1px solid #000000;
+    	border-radius: 5px;
+		cursor: pointer;
+		display: block;
+		font-weight: 600;
+		padding: 5px 10px;
+	    position: absolute;
+    	right: 15px;
+    	top: 20px;
+	}
+	
+	.hlavni_polozky {
+		float: none;
+	}
+	
+	.hlavni_menu ul li ul {
+		max-height: unset;
+	}
+	
+	.hlavni_menu > div > ul > li > a {
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+	}
+	
+	.hlavni_menu > div > ul > li > ul > li a {
+		width: 100%;
+	}
+	
+	.menu-hlavni-menu-container {
+		width: 100%;
+   		position: absolute;
+    	top: 70px;
+	}
+	
+	.nadpis_sekce {
+		margin: 15px 15px 0px 15px;
+		width: 100%;
+	}
+	
+	.sub-menu {
+		max-width: 100%;;
+		min-height: unset;
+		position: inherit;
+	}
+}

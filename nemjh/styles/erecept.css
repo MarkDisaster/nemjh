@@ -1,0 +1,80 @@
+article {
+	margin-bottom: 0px;
+}
+
+.erecept001 {
+	display: flex;
+}
+/*
+.erecept002 {
+	background-image: url(../images/bg-erecept.png);
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}*/
+
+.erecept_bg {
+    height: auto;
+    margin-top: 80px;
+	width: 90%;
+}
+
+.erecept002,
+.erecept003 {
+	width: 50%;
+}
+
+.erecept003 {
+	padding-bottom: 100px;
+}
+
+div[class^="erecept"] h2 {
+	color: #378b62;
+	text-align: left;
+	padding-bottom: 30px;
+	padding-top: 50px;
+}
+
+div[class^="erecept"] ol,
+div[class^="erecept"] ul {
+	list-style: none;
+}
+
+ol, ul {
+	padding: 0;
+}
+
+ol li {
+	margin-bottom: 10px;
+}
+
+.gform_wrapper {
+	width: 50%;
+}
+
+.gfield_list_icons {
+	display: flex;
+}
+
+.gform_wrapper div.validation_error {
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+body.page-template-page-empty .ginput_container_list table.gfield_list tbody tr td.gfield_list_icons img.add_list_item, body.page-template-page-empty .ginput_container_list table.gfield_list tbody tr td.gfield_list_icons img.delete_list_item {
+	margin-top: 15px;
+	transition: .15s;
+	width: 63px !important;
+}
+
+body.page-template-page-empty .ginput_container_list table.gfield_list tbody tr td.gfield_list_icons img.delete_list_item {
+	margin-left: 5px;
+	margin-top: 16px;
+}
+
+@media only screen and (min-width: 641px) {
+	.gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
+		width: 100% !important;
+	}	
+}

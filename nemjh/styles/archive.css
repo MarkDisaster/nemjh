@@ -1,0 +1,92 @@
+.aktuality_obal {
+	padding-top: 20px;
+}
+
+.box_hlavni_informace_obal {
+	text-align: center;
+}
+
+.box_hlavni_informace_obal select {
+	background: none;
+	border: 0px none;
+	letter-spacing: 0.50rem;
+	max-width: calc(100% - 28px);
+    padding: 30px;
+	text-align: center;
+    text-align-last: center;
+	position: relative;
+	z-index: 6;
+}
+
+.box_hlavni_informace_obal select option {
+	color: #303030;
+   text-align: left;
+}
+
+.box_hlavni_informace_obal select::-ms-expand {
+    display: none;
+}
+
+.box_hlavni_informace_obal2 th:first-child,
+.box_hlavni_informace_obal2 td:first-child {
+	width: 20%;
+}
+
+.box_hlavni_informace_obal2 table:nth-child(2) th:nth-child(2),
+.box_hlavni_informace_obal2 table:nth-child(2) td:nth-child(2) {
+	width: 30%;
+}
+
+.box_hlavni_informace_obal2 table:nth-child(2) thead th:first-child {
+	color: #4d97e3;
+	font-weight: bold;
+}
+
+.filtr_prispevku_radio {
+	color: #4d97e3;
+    font-weight: 600;
+    font-size: 1rem;
+	list-style: none;
+}
+
+.filtr_prispevku_radio li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.filtr_prispevku_radio input {
+	height: 1.1rem;    
+    vertical-align: top;
+	width: 1.1rem;
+}
+/*
+.filtr_prispevku_radio div {
+	background-image:url('http://www.nemjh.cz/wp-content/uploads/novinka-lekarna-prasky-002-102x68.jpg');
+	background-size: 100% 100%;
+	margin: 0 auto;
+	height: 1rem;
+	width: 1rem;
+}*/
+
+select::-ms-expand {
+    display: none;
+}
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.box_post_filtr_obal:after {
+	bottom: 4px;
+	color: #4d97e3;
+	content: '\25BC';
+	font-size: 1.5rem;;
+    left: -25px;
+	position: relative;
+	z-index: 5;
+}
+
+/*.category-prace .box_hlavni_informace,*/
+.category-prace time {
+	display: none;
+}

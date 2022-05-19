@@ -1,0 +1,3 @@
+<div class="box_post_filtr_obal">
+	<a href="https://portal.jihnem.cz/Reservations/Home/Covid/cs/public_services/nemocnice-jindrichuv-hradec-a-s-odberove-m-covid-19-antigen/calendar?layout=body&operation_id=4&place_id=5" target="_blank" class="tlacitko tlacitko_obrys_modra ml_25 mr_25 mb_15 mt_15">Objednání na ANTIGENNÍ test Covid-19 pro veřejnost</a><a href="https://portal.jihnem.cz/Reservations/Home/Covid/cs/public_services/nemocnice-jindrichuv-hradec-a-s-odberove-misto-covid-19-pcr/calendar?layout=body&operation_id=2&place_id=4" target="_blank" class="tlacitko tlacitko_obrys_modra mb_15 mt_15">Objednání na PCR test Covid-19</a>
+</div>
